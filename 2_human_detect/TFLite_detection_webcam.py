@@ -1,3 +1,18 @@
+######## Webcam Object Detection Using Tensorflow-trained Classifier #########
+#
+# Author: Evan Juras
+# Date: 10/27/19
+# Description: 
+# This program uses a TensorFlow Lite model to perform object detection on a live webcam
+# feed. It draws boxes and scores around the objects of interest in each frame from the
+# webcam. To improve FPS, the webcam object runs in a separate thread from the main program.
+# This script will work with either a Picamera or regular USB webcam.
+#
+# This code is based off the TensorFlow Lite image classification example at:
+# https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/python/label_image.py
+#
+# I added my own method of drawing boxes and labels using OpenCV.
+
 # Import packages
 import os
 import argparse
@@ -207,11 +222,10 @@ while True:
             cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
 
     # Capture and save image when person is detected
-        if labels[int(classes[i])] == 'person' and int(scores[i]*100)>=60:
-            current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-            image_name = f"person_detected_{current_time}.jpg"
-            image_path = os.path.join('/home/seyeong/tsample/image', image_name)
-            cv2.imwrite(image_path, frame)
+            if labels[int(classes[i])] == 'person' and int(scores[i]*100)>=60:
+                image_name = f"person.jpg"
+                image_path = os.path.join('/home/pi/tsample/image', image_name)
+                cv2.imwrite(image_path, frame)
                 
     # Draw framerate in corner of frame
     cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)

@@ -1,3 +1,0 @@
-This code is for raspberry pi GUI
-
-Open Thony and run

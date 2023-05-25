@@ -1,0 +1,9 @@
+* People detection system
+
+
+* How to start code
+
+1. [remote_control] code is for GUI and control
+
+
+2. [human_detect] code is detect people and take pictures
