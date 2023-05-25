@@ -1,10 +1,10 @@
 from flask import Flask, render_template, Response
 import cv2
 
-#Flask: 웹 애플리케이션 프레임워크.
-# render_template: HTML 템플릿을 렌더링하는 데 사용되는 Flask 함수.
-#Response: 웹 요청에 대한 응답을 생성하는 Flask 함수.
-#cv2: OpenCV 라이브러리로 이미지 처리를 위해 사용.
+# Flask: 웹 애플리케이션 프레임워크
+# render_template: HTML 템플릿을 렌더링하는 데 사용되는 Flask 함수
+# Response: 웹 요청에 대한 응답을 생성하는 Flask 함수
+# cv2: OpenCV 라이브러리로 이미지 처리를 위해 사용
 
 app = Flask(__name__)
 
