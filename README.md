@@ -1,6 +1,6 @@
 # people_detection_system
 ![동영상](https://github.com/pica-sso/people_detection_system/assets/89729297/57075fbe-1379-46e9-a1e2-fe8c9e21b758)
-## SSAFY 종합 PJT (2023.05.26.)
+## SSAFY 종합 PJT - 인명 탐색 로봇 (2023.05.26.)
 ### 재난 상황에서 사람이 가지 못하는 곳을 정찰하고 생존자를 찾기 위한 로봇
 
 - SSAFY 9기 광주 6반 임베디드 트랙 <br>
